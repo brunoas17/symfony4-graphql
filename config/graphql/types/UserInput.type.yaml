@@ -1,0 +1,10 @@
+UserInput:
+  type: input-object
+  config:
+    fields:
+      name:
+        type: "String"
+        description: "User name"
+      email:
+        type: "String"
+        description: "user email"

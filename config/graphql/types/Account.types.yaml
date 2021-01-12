@@ -1,0 +1,20 @@
+Account:
+  type: object
+  config:
+    description: "Account"
+    fields:
+      id:
+        type: "Int"
+        description: "Account id"
+      name:
+        type: "String"
+        description: "Account name"
+      user:
+        type: "User"
+        description: "Account User"
+        resolve: "@=value.getUser()"
+      type:
+        type: "String"
+        description: "Account Type"
+        resolve: "@=value.getAccountType().getType()"
+

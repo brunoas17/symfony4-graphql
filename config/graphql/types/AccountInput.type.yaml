@@ -1,0 +1,13 @@
+AccountInput:
+  type: input-object
+  config:
+    fields:
+      name:
+        type: "String"
+        description: "Account name"
+      user_id:
+        type: "Int"
+        description: "Account user id"
+      account_type_id:
+        type: "Int"
+        description: "Account type id"

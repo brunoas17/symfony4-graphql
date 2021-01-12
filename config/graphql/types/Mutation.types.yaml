@@ -1,0 +1,48 @@
+Mutation:
+  type: object
+  config:
+    fields:
+      createUser:
+        type: "User"
+        resolve: "@=mutation('create_user', [args])"
+        args:
+          input:
+            type: "UserInput"
+      updateUser:
+        type: "User"
+        resolve: "@=mutation('update_user', [args])"
+        args:
+          id:
+            type: "Int"
+            description: "User Id"
+          input:
+            type: "UserInput"
+      deleteUser:
+        type: "User"
+        resolve: "@mutation('delete_user', [args])"
+        args:
+          id:
+            type: "Int"
+            description: "User id"
+      createAccount:
+        type: "Account"
+        resolve: "@=mutation('create_account', [args])"
+        args:
+          input:
+            type: "AccountInput"
+      updateAccount:
+        type: "Account"
+        resolve: "@=mutation('update_account', [args])"
+        args:
+          id:
+            type: "Int"
+            description: "Account id"
+          input:
+            type: "AccountInput"
+      deleteAccount:
+        type: "Account"
+        resolve: "@mutation('delete_account', [args])"
+        args:
+          id:
+            type: "Int"
+            description: "Account id"

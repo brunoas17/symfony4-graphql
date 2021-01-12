@@ -1,0 +1,26 @@
+Query:
+  type: object
+  config:
+    description: "Main Query"
+    fields:
+      user:
+        type: "User"
+        args:
+          id:
+            description: "Get user by id"
+            type: "Int"
+        resolve: "@=resolver('User', [args])"
+      users:
+        type: "[User]"
+        resolve: "@=resolver('Users')"
+      account:
+        type: "Account"
+        args:
+          id:
+            description: "Get account by id"
+            type: "Int"
+        resolve: "@=resolver('Account', [args])"
+      accounts:
+          type: "[Account]"
+          resolve: "@=resolver('Accounts', [args])"
+
